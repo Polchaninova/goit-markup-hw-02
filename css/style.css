@@ -66,6 +66,7 @@ li {
   list-style-type: none;
 }
 h2 {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
@@ -196,6 +197,11 @@ h4 {
   color: var(--color-opacity);
   text-decoration: none;
 }
-.footer-email:hover {
+.footer-email:hover,
+.footer-address-link:hover {
   color: var(--color-action);
+}
+.footer-address-link {
+  text-decoration: none;
+  color: var(--color-invert);
 }
