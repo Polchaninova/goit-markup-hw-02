@@ -8,6 +8,8 @@
   --color-background-second: #2f303a;
   --color-background-brand: #f5f4fa;
   --color-background-action: #2196f3;
+  --background-color-even: #188ce8;
+  --color-border-one: #eeeeee;
 }
 html {
   box-sizing: border-box;
@@ -29,12 +31,7 @@ p {
 }
 body {
   font-family: "Roboto", sans-serif;
-  background: #f5f5f5;
   background-color: var(--primary-white-color);
-  /* font-size: 14px;
-  color: var(--color-primary);
-  color: var(--primary-text-color);
-  */
 }
 
 a {
@@ -77,7 +74,7 @@ header {
 }
 .nav_link_logo .current:hover,
 .nav_link_logo .current:focus {
-  color: #188ce8;
+  color: var(--background-color-even);
 }
 .nav_link_logo .current {
   color: var(--color-action);
@@ -90,14 +87,17 @@ header {
   line-height: 16px;
   letter-spacing: 0.02em;
 }
+
 .nav_list:not(:last-of-type) .nav_link_menu {
   margin-right: 50px;
 }
 .nav_list .nav_link_menu:hover,
 .nav_list .nav_link_menu:focus {
-  color: #188ce8;
+  color: var(--background-color-even);
 }
-
+.nav_link_menu.current {
+  color: var(--color-action);
+}
 .header-contact {
   display: flex;
   padding-top: 24px;
@@ -111,7 +111,7 @@ header {
   line-height: 1.13;
   letter-spacing: 0.02em;
 
-  color: #757575;
+  color: var(--color-text-deck);
 }
 .header_link_tel {
   margin-left: 50px;
@@ -120,11 +120,11 @@ header {
   line-height: 1.13;
   letter-spacing: 0.02em;
 
-  color: #757575;
+  color: var(--color-text-deck);
 }
 .header_link_tel:hover,
 .header_link_email:hover {
-  color: #188ce8;
+  color: var(--background-color-even);
 }
 .contact {
   width: 100%;
@@ -148,7 +148,7 @@ header {
 }
 .contact_btn {
   padding: 10px 32px 10px 32px;
-  border: 4px solid #2196f3;
+  border: 4px solid var(--color-action);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: var(--color-background-action);
@@ -159,7 +159,7 @@ header {
   line-height: 1.87;
 }
 .contact_btn:hover {
-  background-color: #188ce8;
+  background-color: var(--background-color-even);
 }
 .about {
   padding-bottom: 94px;
@@ -171,7 +171,7 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color: var(--color-primary);
 }
 .about_item {
   padding-left: 0;
@@ -189,7 +189,7 @@ header {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: left;
-  color: #212121;
+  color: var(--color-primary);
 }
 .descript_text {
   width: 270px;
@@ -200,7 +200,7 @@ header {
   letter-spacing: 0.03em;
   text-align: left;
 
-  color: #757575;
+  color: var(--color-text-deck);
 }
 .work {
   padding-bottom: 94px;
@@ -213,7 +213,7 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color: var(--color-primary);
 }
 .work-item {
   display: flex;
@@ -229,8 +229,8 @@ header {
 .teams {
   padding-top: 74px;
   padding-bottom: 74px;
-
   font-family: "Roboto";
+  background-color: var(--color-background-brand);
 }
 .teams_title {
   margin-bottom: 50px;
@@ -240,7 +240,7 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color: var(--color-primary);
 }
 .team_list {
   padding-left: 0;
@@ -249,7 +249,7 @@ header {
 }
 .teams_item {
   /* margin-left: 30px; */
-  background: #ffffff;
+  background: var(--color-background-primary);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -267,7 +267,7 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color: var(--color-primary);
 }
 .teams_position {
   margin-top: 10px;
@@ -279,7 +279,7 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #757575;
+  color: var(--color-text-deck);
 }
 .footer {
   width: 100%;
@@ -292,7 +292,7 @@ header {
   font-size: 26px;
   line-height: 1;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--color-invert);
 }
 .footer_logo_link .current {
   color: var(--color-action);
@@ -316,7 +316,7 @@ header {
   line-height: 1.4;
   letter-spacing: 0.03em;
 
-  color: #ffffff;
+  color: var(--color-invert);
 }
 .footer_contact {
   margin-bottom: 9px;
@@ -325,9 +325,14 @@ header {
   line-height: 1.4;
   letter-spacing: 0.03em;
 
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-opacity);
+  /* color: rgba(255, 255, 255, 0.6); */
 }
 /* portfolio */
+.address_list {
+  display: block;
+  font-style: normal;
+}
 .services {
   padding-top: 60px;
 }
@@ -339,7 +344,7 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color: var(--color-primary);
 }
 .services_list {
   display: flex;
@@ -351,11 +356,11 @@ header {
 }
 .services_btn {
   padding: 6px 26px;
-  background: #f5f4fa;
-  border: #f5f4fa;
+  background: var(--color-background-brand);
+  border: var(--color-background-brand);
   border-radius: 4px;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12); */
 
   font-weight: 500;
   font-size: 16px;
@@ -365,10 +370,10 @@ header {
 }
 .services_btn:hover,
 .services_btn:focus {
-  background: #2196f3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  color: #ffffff;
+  background: var(--color-background-action);
+  /* box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12); */
+  color: var(--color-background-primary);
 }
 .server_menu {
   padding-left: 0;
@@ -382,10 +387,8 @@ header {
   margin-bottom: 30px;
   width: 370px;
   height: 404px;
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-}
-.server_img {
+  background: var(--color-background-primary);
+  border: 1px solid var(--color-border-one);
 }
 .server_menu_title {
   padding-top: 20px;
@@ -395,7 +398,7 @@ header {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: #212121;
+  color: var(--color-primary);
 }
 .server_menu_descript {
   padding-left: 24px;
@@ -405,5 +408,5 @@ header {
   line-height: 1.8;
   letter-spacing: 0.03em;
 
-  color: #757575;
+  color: var(--color-text-deck);
 }
